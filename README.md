@@ -41,7 +41,11 @@ Please make sure to update tests as appropriate.
 
 ## Current State
 * 100% Done!
-* Bugs aren't that much severe 
+
+## Advantages
+* Easy to use
+* 100% Accurate info when scraping user's info
+* Fast and Deadly! :o
 
 ## 
 ## Social Media
