@@ -55,7 +55,7 @@ def scrape():
     print(wi + gr + 'DONE!!!')
 
 def username():
-    userr = input('Input a username: ')
+    userr = input(mg + 'Input a username: ')
     time.sleep(1)
     print(Fore.YELLOW + f'Validating Github-User: {userr}')
     time.sleep(2)
