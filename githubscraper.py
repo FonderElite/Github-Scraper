@@ -32,7 +32,7 @@ def help():
      ''')
 def choice():
     sure = ['y','n']
-    choice = input(Fore. Blue ,+ "Are You Sure? y/n: ")
+    choice = input(Fore. BLUE ,+ "Are You Sure? y/n: ")
     if choice == sure[0]:
         time.sleep(1)
         print(Fore.YELLOW + "(っ◔◡◔)っ ♥ Quitting.... ♥")
@@ -146,11 +146,11 @@ while True:
  elif command == './gs -c':
      checkfile()
  elif command == './gs -up':
-     sys.stdout.write(Fore.Magenta + '\r cloning to the repository.')
+     sys.stdout.write(mg + '\r cloning to the repository.')
      time.sleep(1)
-     sys.stdout.write(Fore.Magenta + '\r cloning to the repository..')
+     sys.stdout.write(mg + '\r cloning to the repository..')
      time.sleep(1)
-     sys.stdout.write(Fore.Magenta + '\r Cloning to the repository...')
+     sys.stdout.write(mg + '\r Cloning to the repository...')
      time.sleep(1)
      os.system('git clone https://github.com/fonderelite/Github-Scraper\n')
      print(gr + ' Done!!!')
