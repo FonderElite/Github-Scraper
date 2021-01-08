@@ -112,7 +112,7 @@ helpme = print(wi + gr + '''
 +|      -c         Check Files             |+
 +|      -u         Update                  |+
 +|      -q         Quit                    |+
-+|      Ex   ./gs -u -s            (Scrape)|+
++|      Ex   ./gs -u -s (Start-Scraping)   |+
  ===========================================
  ''')
 print(yl + '''
