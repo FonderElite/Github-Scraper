@@ -1,0 +1,7 @@
+requests
+json
+colorama
+pprint
+platform
+sys
+colorama
