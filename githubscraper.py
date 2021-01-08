@@ -121,7 +121,7 @@ Visit My Github Page: https://github.com/Fonderelite
 ''')
 while True:
  command = input(gr + '[+]' + Fore.RED + os_sys + "-User: ")
- if command == './githubscrape -h':
+ if command == './gs -h':
      print(wi + gr + ''' 
      =============================================
      +|           GitHub Profile Scraper        |+
