@@ -45,7 +45,8 @@ Please make sure to update tests as appropriate.
 ## Advantages
 * Easy to use
 * 100% Accurate info when scraping user's info
-* Fast and Deadly! :o
+* Fast!
+* Supports all operating system with python installed!
 
 ## 
 ## Social Media
