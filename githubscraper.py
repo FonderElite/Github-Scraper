@@ -22,7 +22,7 @@ def help():
     +|  M a d e    By    F o n d e r E l i t e |+
     +|-----------------------------------------|+
     +|      -h          Help                   |+
-    +|      -s         Start Scraping          |+
+    +|      -s         Start.                  |+
     +|      -u         Username                |+
     +|      -c         Check Files             |+
     +|      -up        Update                  |+
@@ -32,7 +32,7 @@ def help():
      ''')
 def choice():
     sure = ['y','n']
-    choice = input("Are You Sure? y/n: ")
+    choice = input(Fore. Blue ,+ "Are You Sure? y/n: ")
     if choice == sure[0]:
         time.sleep(1)
         print(Fore.YELLOW + "(っ◔◡◔)っ ♥ Quitting.... ♥")
@@ -146,11 +146,11 @@ while True:
  elif command == './gs -c':
      checkfile()
  elif command == './gs -up':
-     sys.stdout.write('\r cloning to the repository.')
+     sys.stdout.write(Fore.Magenta + '\r cloning to the repository.')
      time.sleep(1)
-     sys.stdout.write('\r cloning to the repository..')
+     sys.stdout.write(Fore.Magenta + '\r cloning to the repository..')
      time.sleep(1)
-     sys.stdout.write('\r Cloning to the repository...')
+     sys.stdout.write(Fore.Magenta + '\r Cloning to the repository...')
      time.sleep(1)
      os.system('git clone https://github.com/fonderelite/Github-Scraper\n')
      print(gr + ' Done!!!')
