@@ -21,15 +21,15 @@ This Tool is using Web Request modules
 
 ## Installation
 
-[git clone] https://github.com/FonderElite/GithubScraper to install GithubScraper.
+[git clone](https://github.com/FonderElite/GithubScraper)to install GithubScraper.
 
-```shell
+```
 pip install requirements.txt
 ```
 
 ## Usage
 
-```shell
+```
 python3 githubscraper.py
 Ex ./gs -u -s (Start Scraping)
 ```
