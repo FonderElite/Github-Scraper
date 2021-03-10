@@ -21,7 +21,7 @@ This Tool is using Web Request modules
 
 ## Installation
 
-```git clone **https://github.com/FonderElite/GithubScraperto** install GithubScraper.```
+#### ```git clone **https://github.com/FonderElite/GithubScraper to install GithubScraper.```
 
 ```
 pip install requirements.txt
