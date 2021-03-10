@@ -7,15 +7,13 @@ from pprint import pprint
 import platform
 import sys
 from colorama import Fore
-wi = Fore.WHITE
-rd = Fore.RED
-yl = Fore.YELLOW
-mg = Fore.MAGENTA
-gr = Fore.GREEN
-cy = Fore.CYAN
+wi="\033[1;37m" #>>White#
+rd="\033[1;31m" #>Red   #
+gr="\033[1;32m" #>Green #
+yl="\033[1;33m" #>Yellow#
 os_sys = platform.system()
 def help():
-    help = print(wi + gr + '''
+    help = print(wi  +  yl + '''
     =============================================
     +|           GitHub Profile Scraper        |+
     =============================================
@@ -27,12 +25,12 @@ def help():
     +|      -c         Check Files             |+
     +|      -up        Update                  |+
     +|      -q         Quit                    |+
-    +|      Ex   ./githubscraper -u -s (Start)  |+
+    +|      Ex   ./githubscraper -u -s (Start) |+
      ===========================================
      ''')
 def choice():
     sure = ['y','n']
-    choice = input(Fore. BLUE ,+ "Are You Sure? y/n: ")
+    choice = input(wi + Fore. BLUE + "Are You Sure? y/n: ")
     if choice == sure[0]:
         time.sleep(1)
         print(Fore.YELLOW + "(っ◔◡◔)っ ♥ Quitting.... ♥")
@@ -41,31 +39,31 @@ def choice():
         print(Fore.RED + 'Cancelled.')
 
 def scrape():
-    user = input('Input a username: ')
+    user = input(wi + yl + '[!]' + wi + 'Input a username: ')
     time.sleep(1)
-    print(Fore.YELLOW + f'Scraping Github-User: {user}')
+    print(wi + yl + '[!]' + wi  + f'Scraping Github-User: {user}...')
     time.sleep(2)
     scrape = requests.get(f'https://api.github.com/users/{user}')
     scraped = scrape.json()
-    save = open('user-details.txt','w+')
-    saved = save.write(str(scraped))
+    #prettify_json = json.loads(str(scraped))
+    saved_file = open('user-details.txt', 'w+')  
+    saved = saved_file.write(str(scraped))
     time.sleep(2)
     pprint(scraped)
-    print(Fore.CYAN + 'Saving Details to user-details.txt')
-    print(wi + gr + 'DONE!!!')
+    print(wi + gr + '[+]' + wi + 'Saving Details to user-details.txt')
 
 def username():
-    userr = input(mg + 'Input a username: ')
+    userr = input(wi + yl + '[!]' + wi + 'Input a username: ')
     time.sleep(1)
     print(Fore.YELLOW + f'Validating Github-User: {userr}')
     time.sleep(2)
     scrapee = requests.get(f'https://api.github.com/users/{userr}')
     scrapedd = scrapee.status_code
     if scrapedd == 200:
-     print(Fore.GREEN + 'User is Valid!')
+     print(wi + yl + '[+]' + wi  + 'User is Valid!')
     else:
-     print(Fore.RED + 'Invalid User!!!')
-     print(yl + "Either user is not on Github or account was deleted.")
+     print(wi + rd + '[-]'  + wi + 'Invalid User!!!')
+     print(wi + yl + '[!]' + wi +  "Either user is not on Github or account was deleted.")
     time.sleep(2)
 
 def checkfile():
@@ -77,12 +75,12 @@ def checkfile():
  if file1 and file2 and file3 and file4 and file4 and file5 == True:
     print(mg + 'Checking if all files are present')
     time.sleep(2)
-    print(cy + "Files Are Safe!")
+    print(wi  + '[+]' + wi + "Files Are Safe!")
  else:
-     print(rd +  "Some Files are missing!")
-     print(yl + "Please consider checking your files again.")
+     print(wi  +  "Some Files are missing!")
+     print(wi + yl + '[!]' + wi + "Please consider checking your files again.")
 def banner():
-    print(Fore.CYAN + '''
+    print(wi + Fore.CYAN + '''
           ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀
@@ -100,7 +98,7 @@ def banner():
         ''')
 banner()
 time.sleep(2)
-helpme = print(wi + gr + ''' 
+helpme = print(wi  + yl + ''' 
 =============================================
 +|           GitHub Profile Scraper        |+
 =============================================
@@ -115,14 +113,12 @@ helpme = print(wi + gr + '''
 +|      Ex   ./gs -u -s (Start-Scraping)   |+
  ===========================================
  ''')
-print(yl + '''
-Made By FonderElite || Droid
-Visit My Github Page: https://github.com/Fonderelite
-''')
+print(wi + gr + '[+]' +  wi + 'Made By FonderElite || Droid')
+print(wi + yl + '[!]' + wi + 'Visit My Github Page: https://github.com/Fonderelite')
 while True:
- command = input(gr + '[+]' + Fore.RED + os_sys + "-User: ")
+ command = input(wi + gr + '[+]' + wi + os_sys + "-User: ")
  if command == './gs -h':
-     print(wi + gr + ''' 
+     print(wi + yl + ''' 
      =============================================
      +|           GitHub Profile Scraper        |+
      =============================================
@@ -160,7 +156,7 @@ while True:
  ___  __   __   __    __           
 |__  |__) |__) /  \ |__)      
 |___ |  \ |  \ \__/ |  \      ''')
-        print(Fore.BLUE + '''
+        print(wi + Fore.BLUE + '''
            __n__n__
     .------`-/00/-'
    /  ##  ## (oo)   Please Try Again.
